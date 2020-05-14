@@ -1,0 +1,288 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+        </div>
+            <div class="col sm-12 md-6 lg-6">
+                <div class="card card-width">
+                    <div class="card-header bg-dark text-white">
+                         Edit
+                    </div>
+                    <div class="card-body">
+                        <form  action="" #movieForm = "ngForm">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="movieID">Movie ID:</label>
+                                    </div>
+                                        <div class="col-sm-8">
+                                            <div>
+                                            <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                placeholder="Enter Movie ID" 
+                                                name="movieId"
+                                                required
+                                                id="movieID"
+                                                minlength="4"
+                                                #movieId="ngModel"
+                                                [(ngModel)]="movie.movieId">
+                                            </div>
+                                            <div
+                                                *ngIf="movieId.touched" 
+                                                class="small text-danger">
+                                                <small *ngIf="movieId.errors?.required">
+                                                Please enter Id
+                                                </small>
+                                            </div>
+                                            
+                                        </div>
+                                </div>
+                            </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="movieTitle">Movie Title:</label>
+                            </div>
+                                <div class="col-sm-8">
+                                    <div>
+                                    <input 
+                                        type="text" 
+                                        class="form-control" 
+                                        placeholder="Enter Movie Title" 
+                                        name="movieTitle"
+                                        id="movieTitle"
+                                        required
+                                        minlength="4"
+                                        #movieTitle="ngModel"
+                                        [(ngModel)]="movie.movieTitle">
+                                    </div>
+                                    <div
+                                        *ngIf="movieTitle.touched" 
+                                        class="small text-danger">
+                                        <small *ngIf="movieTitle.errors?.required">
+                                         Please enter name
+                                        </small>
+                                    </div>
+                                    
+                                    
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="movieReleaseOn">Movie Release On:</label>
+                            </div>
+                                <div class="col-sm-8">
+                                    <div>
+                                    <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            placeholder="Movie Release On" 
+                                            name="movieReleaseOn"
+                                            id="movieReleaseOn"
+                                            required
+                                            #movieReleaseOn="ngModel"
+                                            [(ngModel)]="movie.movieDate">
+                                    </div>
+                                    <div
+                                        *ngIf="movieReleaseOn.touched" 
+                                        class="small text-danger">
+                                        <small *ngIf="movieReleaseOn.errors?.required">
+                                         Please enter release date
+                                        </small>
+                                    </div>
+                                </div>
+                                </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="movieDirectedBy">Movie Directed By:</label>
+                            </div>
+                                    <div class="col-sm-8">
+                                        <div>
+                                        <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                placeholder="Movie Directed By" 
+                                                name="movieDirectedBy"
+                                                id="movieDirectedBy"
+                                                required
+                                                #movieDirectedBy="ngModel"
+                                                [(ngModel)]="movie.movieDirector">
+                                        </div>
+                                        <div
+                                                 *ngIf="movieDirectedBy.touched" 
+                                                 class="small text-danger">
+                                                <small *ngIf="movieDirectedBy.errors?.required">
+                                                Please enter director name
+                                                </small>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label for="movieImageUrl">Movie Image URL:</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <div>
+                                <input 
+                                    type="text" 
+                                    class="form-control" 
+                                    placeholder="Movie Image URL:" 
+                                    name="movieImageUrl"
+                                    id="movieImageUrl"
+                                    required
+                                    #movieImageUrl="ngModel"
+                                    [(ngModel)]="movie.movieUrl">
+                                </div>
+                                <div
+                                    *ngIf="movieImageUrl.touched" 
+                                    class="small text-danger">
+                                    <small *ngIf="movieImageUrl.errors?.required">
+                                    Please enter Url
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button 
+                                type="button" 
+                                class="btn btn-info"
+                                (click)="updateMovie()"
+                                [disabled]='!movieForm.valid'>
+                                Save
+                            </button>
+                        </div>
+                            
+                        <div class="col">
+                            <button 
+                                type="reset" 
+                                class="btn btn-info">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="col">
+        </div>
+    </div>
+</div>
+<!--<div  class="container">
+  
+	<div class="row mt-5 ">
+	    <div class="col-md-3">
+        </div>
+	        <div class="col-md-6 ">
+	            <div class="card card-align ">
+	            <h2>
+                    <div 
+                        class="card-header  background-color:LightGray bg-info text-white">
+                        EDIT
+                    </div>
+                </h2>
+               <div class="card-body ">
+                <form action="">
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="name">Movie Id:</label>
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="mid" 
+                                      name="mid"/>
+                                      
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="name">Movie Title:</label>
+                                  
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="name" 
+                                      name="regname" />
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="release">Movie Release On:</label>
+                                  
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="release" 
+                                      name="release" />
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="director">Movie Directed By:</label>
+                                  
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="director" 
+                                      name="director" />
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="url">Movie Image Url:</label>
+                                  
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="url" 
+                                      name="url" />
+                            </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <button 
+                                  type="submit" 
+                                  class="btn btn-info bg-info"
+                                  >Save
+                            </button>
+                        </div>
+                      <div class="col-md-9">
+                            <button 
+                                  type="reset" 
+                                  class="btn btn-info bg-info">
+                                  clear
+                            </button>
+                       </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>-->

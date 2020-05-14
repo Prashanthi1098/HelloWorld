@@ -1,0 +1,78 @@
+<button 
+    type="button" 
+    class="btn btn-secondary" 
+    (click)="toggleAdd()"
+    > Add Employee 
+</button>
+
+
+<div class="container">
+    <form class='form-inline' *ngIf="show" #employeeForm = 'ngForm'>
+        <div class="row m-5">
+            <div class="col ">
+                <label for='eName'>Name:</label> 
+                <input 
+                    type='text' 
+                    id='eName' 
+                    name="eName" 
+                    #employeeName= "ngModel"  
+                    [(ngModel)]='empName' 
+                    required/> 
+                <!-- should give name="" to inputs attributes, to use [(ngModel)]  -->
+            </div>
+            <div class="small text-danger " *ngIf="employeeName.errors?.required && employeeName.touched && touched">
+               Please Enter name
+            </div>
+            <div class="col ">
+                <label for='eSalary'>Salary:</label>  
+                <input 
+                    type='text' 
+                    id='eSalary' 
+                    name="eSalary" 
+                    #employeeSalary = "ngModel"
+                    [(ngModel)]='empSalary'
+                    required/> 
+            </div>
+            <div class="small text-danger"  *ngIf="employeeSalary.errors?.required &&  employeeSalary.touched && touched">
+               Please Enter Salary
+            </div>
+            
+            <div class="col ">
+                <button 
+                    type='button' 
+                    class='btn btn-success' 
+                    (click)='addEmployee()'
+                    [disabled] = '!employeeForm.valid'
+                    >+
+                </button> 
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div class="container">
+<div class="table-responsive m-5">
+<table class="table table-striped">
+
+<thead class="thead-dark">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th></th>
+    </tr>
+</thead>
+
+<tbody>
+    <tr *ngFor="let empiterator of emps">
+        <td> {{ empiterator.eId }} </td>
+        <td> {{ empiterator.eName }} </td>
+        <td> {{ empiterator.eSalary }} </td>
+        <td> <button type="button" class="btn btn-danger"> <i class="material-icons align-bottom"> delete_forever </i> </button> </td>
+    </tr>
+
+</tbody>
+</table>
+</div>
+</div>

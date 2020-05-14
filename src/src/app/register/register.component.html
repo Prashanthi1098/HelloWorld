@@ -1,0 +1,133 @@
+<div  class="container">
+  
+	<div class="row mt-5 ">
+	    <div class="col-md-3">
+      </div>
+	        <div class="col-md-6">
+	            <div class="card card-align ">
+	            <h2>
+                    <div 
+                        class="card-header  background-color:LightGray bg-info text-white">
+                        REGISTER
+                    </div>
+              </h2>
+              <div class="card-body ">
+                <form action="">
+                      <div class="row">
+                      <div class="col-12 col-sm-6 col-sm-3">
+                            <div class="form-group">
+                              <label for="regname">Name:</label>
+                                  
+                                  <input 
+                                      type="text" 
+                                      class="form-control" 
+                                      id="name" 
+                                      name="regname" required
+                                      placeholder="Enter Name" />
+                                  
+                            </div>
+                      </div>
+                      </div>
+		
+                      <div class="form-group ">
+                        <label for="Address">Address:</label>
+                                <textarea 
+                                        type="textarea" 
+                                        class="form-control" 
+                                        id="address" 
+                                        rows="2"
+                                        placeholder="Enter address" 
+                                        name="address" required
+                                        >
+                                        
+                                </textarea>
+                      </div>
+                      
+                        <div class="form-group">
+                          <label for="sel1">Country:</label>
+                          <select class="form-control" id="sel1" name="sellist1">
+                            <option>India</option>
+                            <option>Korea</option>
+                            <option>Japan</option>
+                            <option>Turkey</option>
+                            <option>Others</option>
+                          </select>
+                        </div>
+                      
+                      <div class="form-group ">
+                        <label for="hobbies"> Hobbies:</label>
+                        <div class="form-inline">
+                            <div class="form-check-inline">
+                                <label class="hob1"></label>
+                                <input type="checkbox" class="form-check-input"  id="hob1"  name="hob1"/>Chess
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="hob2"></label>
+                                <input type="checkbox"  class="form-check-input" id="hob2"  name="hob2"/>Badminton
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="hob3"></label>
+                                <input type="checkbox"  class="form-check-input" id="hob3"  name="hob3"/>Cricket
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="hob4"></label>
+                                <input type="checkbox"  class="form-check-input" id="hob4"  name="hob4"/>others
+                            </div>
+                        </div>
+                        </div> 
+                        <div class="form-group">
+                          <label for="gender">Gender:</label>
+                          <div class="form-inline">
+                            <div class="form-check-inline">
+                              <label class="gender"></label>
+                              <input type="radio" class="form-check-input" id="gender" name="gender">Male                            
+                            </div>
+                            <div class="form-check-inline">
+                              <label class="gender"></label>
+                              <input type="radio" class="form-check-input" id="gender" name="gender">Female
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <div class="form-group ">
+                            <label for="comments">Comments:</label>
+                                    <textarea 
+                                            type="textarea" 
+                                            class="form-control" 
+                                            id="comments" 
+                                            rows="3"
+                                            placeholder="Enter comments" 
+                                            name="comments">
+                                    </textarea>
+                        </div>
+                      <div class="row">
+                        <div class="col">
+                            <button 
+                                  type="submit" 
+                                  class="btn btn-info bg-info"
+                                  (click)="register()">Register
+                            </button>
+                        </div>
+                      <div class="col-md-9">
+                            <button 
+                                  type="reset" 
+                                  class="btn btn-info bg-info">
+                                  clear
+                            </button>
+                       </div>
+                    </div>
+                </form>
+              </div>
+	    </div>
+		<div class="col"></div>
+	</div>
+</div>
+</div>
+<!--<div *ngIf="show">
+  Name:name,
+  Address:address,
+  country:country,
+  Hobbies:hobbies,
+  Gender:gender,
+  Comments:comments
+</div>-->

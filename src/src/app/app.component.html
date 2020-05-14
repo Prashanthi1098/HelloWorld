@@ -1,0 +1,45 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-info">
+    <a class="navbar-brand text-white" href="#">Menu</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item ">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="/display">
+                    Display
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="/employee">
+                    Employee
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="/register">
+                    Register
+                </a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link text-white" 
+                    routerLink="movie-list">
+                    Movies
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--<app-register></app-register>
+<app-display></app-display>
+<app-movie-list></app-movie-list>
+<app-movie-edit></app-movie-edit>
+<app-employee></app-employee>-->
+<router-outlet></router-outlet>

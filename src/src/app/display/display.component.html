@@ -1,0 +1,25 @@
+
+<h2>{{title}}</h2>
+<button 
+        type="button" 
+        class="btn btn-secondary ml-5" 
+        (click)="displayData()">
+        Display Me
+ </button>
+ 
+<div>{{ data }}</div>
+<div class="m-5">
+    <button 
+             class="btn btn-success" 
+            (click)="decreaseNumber()">
+            -
+    </button>
+   <input type="text" [(ngModel)]="num" size="2">
+    <button
+             class="btn btn-success"
+            (click)="increaseNumber()">
+            +
+    </button>
+   
+    
+</div>

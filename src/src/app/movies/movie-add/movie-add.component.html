@@ -1,0 +1,148 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col">
+        </div>
+            <div class="col sm-12 md-6 lg-6">
+                <div class="card card-width">
+                    <div class="card-header bg-dark text-white">
+                         Add Movie Details
+                    </div>
+                    <div class="card-body">
+                        <form action="" #movieForm="ngForm">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <label for="movieTitle">Movie Title:</label>
+                                    </div>
+                                        <div class="col-sm-8">
+                                            <div>                                           
+                                                 <input 
+                                                type="text" 
+                                                class="form-control" 
+                                                placeholder="Enter Movie Name" 
+                                                name="movieTitle"
+                                                id="movieTitle"
+                                                required
+                                                #movieTitle="ngModel"
+                                                [(ngModel)]="movie.movieTitle">
+                                                </div>
+                                                <div
+                                                    *ngIf="movieTitle.touched" 
+                                                    class="small text-danger">
+                                                    <small *ngIf="movieTitle.errors?.required">
+                                                     Please enter name
+                                                    </small>
+                                                </div>
+                                                
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <label for="movieDate">Movie Release On:</label>
+                                        </div>
+                                            <div class="col-sm-8">
+                                                <div>
+                                                <input 
+                                                    type="text" 
+                                                    class="form-control" 
+                                                    placeholder="Enter Release Date" 
+                                                    name="movieDate"
+                                                    id="movieDate"
+                                                    required
+                                                    #movieDate="ngModel"
+                                                    [(ngModel)]="movie.movieDate">
+                                                </div>
+                                                <div
+                                                    *ngIf="movieDate.touched" 
+                                                    class="small text-danger">
+                                                    <small *ngIf="movieDate.errors?.required">
+                                                     Please enter release date
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <label for="movieDirector">Movie Director:</label>
+                                            </div>
+                                                <div class="col-sm-8">
+                                                    <div>
+                                                    <input 
+                                                        type="text" 
+                                                        class="form-control" 
+                                                        placeholder="Director Name" 
+                                                        name="movieDirector"
+                                                        id="movieDirector"
+                                                        required
+                                                        #movieDirector="ngModel"
+                                                        [(ngModel)]="movie.movieDirector">
+                                                    </div>
+                                                    <div
+                                                        *ngIf="movieDirector.touched" 
+                                                        class="small text-danger">
+                                                       <small *ngIf="movieDirector.errors?.required">
+                                                       Please enter director name
+                                                       </small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <label for="movieUrl">Movie Url:</label>
+                                                </div>
+                                                    <div class="col-sm-8">
+                                                        <div>
+                                                        <input 
+                                                            type="text" 
+                                                            class="form-control" 
+                                                            placeholder="Enter Movie Url" 
+                                                            name="movieUrl"
+                                                            id="movieUrl"
+                                                            required
+                                                            #movieUrl="ngModel"
+                                                            [(ngModel)]="movie.movieUrl">
+                                                            </div>
+                                                            <div
+                                                                *ngIf="movieUrl.touched" 
+                                                                class="small text-danger">
+                                                                <small *ngIf="movieUrl.errors?.required">
+                                                                Please enter Url
+                                                                </small>
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="row">
+                                                <div class="col">
+                                                    <button 
+                                                        type="button" 
+                                                        class="btn btn-info"
+                                                        (click)="add()"
+                                                        [disabled]="!movieForm.valid">
+                                                        Add
+                                                    </button>
+                                                </div>
+                                                    
+                                                <div class="col">
+                                                    <button 
+                                                        type="reset" 
+                                                        class="btn btn-info">
+                                                        Clear
+                                                    </button>
+                                                </div>
+                                            </div>      
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+            </div>
+    </div>
+</div>
+
